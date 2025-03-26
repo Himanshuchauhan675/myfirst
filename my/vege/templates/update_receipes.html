@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Login</title>
+  </head>
+  <body>
+ 
+   
+
+    <div class="container my-4">
+     <h1 class="text-center">update to our website</h1>
+     <form action="" method="post" class="col-6 mx-auto card p-3 shadow-lg">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="receipe_name" class="form-label">Receipe name</label>
+            <input  name="receipe_name"  value="{{ receipe.receipe_name}}" type="text" class="form-control" >
+            
+        </div>
+        <div class="form-group">
+            <label for="receipe_description">Receipe description</label>
+   
+            <textarea  name="receipe_description"  class="form-control">{{ receipe.receipe_description}}</textarea>
+        </div>
+        
+       
+         
+        <button type="submit" class="btn btn-success">update Receipe</button>
+     </form>
+    
+    
+    </div>
+</body>
+</html>

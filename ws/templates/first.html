@@ -1,0 +1,48 @@
+ {% extends "base.html" %}
+ {% block content %}
+
+
+{% load static %}
+<html>
+    <head>
+        <title>{{title}}</title>
+       
+        <link rel="stylesheet"  href="{% static 'css/style.css' %}"/>
+       
+    </head>
+    <body>
+      {% for n in  clist %}
+      <div class="main">
+        {{forloop.first}}
+        {{n}}
+        
+      </div>
+      {% endfor%}
+      <br/>
+      <table border="1" cellpadding="10px">
+        <tr >
+          <th>Name</th>
+          <th>Phone number</th>
+        </tr>
+        {% for d in student %}
+        <tr>
+          <td>{{d.name}}</td>
+          <td>{{d.phone}}</td>
+
+        </tr>
+        {% endfor %}
+      </table>
+      
+      {% for n in number %}
+         {% if n > 20 %}
+         <div>{{n}}</div>
+         {% endif %}
+
+      {% endfor%}
+      <div class="h">
+        <h2>hey hello</h2>
+      </div>
+     
+    </body>
+    </html>
+    {% endblock%}
